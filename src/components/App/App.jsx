@@ -40,8 +40,7 @@ const App = () => {
   };
 
   const loadContacts = () => {
-    const savedContacts = JSON.parse(localStorage.getItem('contacts'));
-    console.log(savedContacts);
+    const savedContacts = JSON.parse(localStorage.getItem('contacts')) || [];
     if (savedContacts.length > 0) {
       setContacts(savedContacts);
     }
